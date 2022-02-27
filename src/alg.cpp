@@ -1,20 +1,39 @@
-// Copyright 2022 NNTU-CS
+//Copyright 2022 NNTU-CS
 #include <cstdint>
 #include "alg.h"
 
-
-bool checkPrime(uint64_t value) {
-// вставьте код функции
+bool checkPrime(uint64_t value){
+//вставьте код функции
+if(value == 0 || value == 1) {return false;}
+if(value == 2){ return true;}
+for (int i = 2; i <= value / 2; i++) {
+  if(value % 2 == 0){return false;}
+}
+return true;
 }
 
-uint64_t nPrime(uint64_t n) {
-// вставьте код функции
+uint64_t nPrime(uint64_t n){
+//вставьте код функции
+if (n == 1) { return 2;}
+unit64_t count = 1;
+unit64_t max = 18446744073709551600;
+for(unit64_t = 3;i<max;i+=2){
+  if(checkPrime(i)){count++;}
+  if(count == n){return i;}
+}
 }
 
-uint64_t nextPrime(uint64_t value) {
+uint64_t nextPrime(uint64_t value){
 // вставьте код функции
+int next = value+1;
+if(checkPrime(next)){return next;}
+else{next++;}
 }
 
-uint64_t sumPrime(uint64_t hbound) {
-// вставьте код функции
+uint64_t sumPrime(uint64_t hbound){
+//вставьте код функции
+unit64_t sum = 0;
+for(int i = 2 ;i < hbound; i++){
+  if(checkPrime(i)){sum += i;}
+  return sum;
 }
