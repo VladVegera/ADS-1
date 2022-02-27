@@ -15,7 +15,7 @@ return true;
 uint64_t nPrime(uint64_t n){
 //вставьте код функции
 if (n == 1) { return 2;}
-unit64_t count = 1;
+unit64_t count = 1;//переменная для подсчёта номера простого числа
 unit64_t max = 18446744073709551600;
 for(unit64_t = 3;i<max;i+=2){
   if(checkPrime(i)){count++;}
