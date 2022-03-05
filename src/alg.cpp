@@ -21,9 +21,9 @@ uint64_t nPrime(uint64_t n) {
 if (n == 1) {
 return 2;
 }
-unit64_t count = 1;
-unit64_t max = 18446744073709551600;
-for(unit64_t = 3; i<max; i+=2) {
+uint64_t count = 1;
+uint64_t max = 18446744073709551600;
+for(uint64_t i = 3; i<max; i+=2) {
 if(checkPrime(i)) {
 count++;
 }
@@ -43,7 +43,7 @@ next++;
 }
 
 uint64_t sumPrime(uint64_t hbound) {
-unit64_t sum = 0;
+uint64_t sum = 0;
 for(int i = 2 ; i < hbound; i++) {
 if(checkPrime(i)) {
 sum += i;
