@@ -33,7 +33,7 @@ uint64_t nPrime(uint64_t n) {
 uint64_t nextPrime(uint64_t value) {
   bool flag = true;
   uint64_t temp = 0;
-  for (temp = value + 1; flag; ++tenp) {
+  for (temp = value + 1; flag; ++temp) {
     if (checkPrime(temp)) {
       break;
     }
