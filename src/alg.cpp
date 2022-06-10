@@ -1,4 +1,5 @@
 //Copyright 2022 NNTU-CS
+#include <math.h>
 #include <cstdint>
 #include "alg.h"
 
@@ -19,17 +20,17 @@ bool checkPrime(uint64_t value) {
 
 uint64_t nPrime(uint64_t n) {
   bool f = true;
-  uint64_t x = 0, num = 0;
+  uint64_t x = 0, numb = 0;
   while (f) {
-    if (checkPrime(num)) {
+    if (checkPrime(numb)) {
       ++x;
     }
     if (x == n) {
       break;
     }
-    ++num;
+    ++numb;
   }
-  return num;
+  return numb;
 }
 
 uint64_t nextPrime(uint64_t value) {
