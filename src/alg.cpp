@@ -4,15 +4,9 @@
 #include "alg.h"
 
 bool checkPrime(uint64_t value) {
-  if (value == 0 || value == 1) {
-    return false;
-  }
-  if (value == 2) {
-    return true;
-  }
-  for (int i = 2; i <= value / 2; i++) {
-    if (value % 2 == 0) {
-     return false;
+  for (int i = 2; i <= sqrt(value); i++) {
+    if (value % i == 0) {
+      return false;
     }
   }
   return true;
